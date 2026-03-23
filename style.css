@@ -1,9 +1,11 @@
 .box{
 
     width: 50%;
-    height: 100%;
-    background-color: red;
+    height: 560px;
+    background-color: seagreen;
     color: white;
+    margin: 0px;
+    padding: 10px;
     border-radius: 10px;
 
 }
