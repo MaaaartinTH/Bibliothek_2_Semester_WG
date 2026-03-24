@@ -6,12 +6,20 @@ html, body {
 }
 
 
+
+.main_container{
+
+    display: flex;
+    height: 100vh;
+    width: 100%;
+
+}
+
 .box{
 
     width: 50%;
     background-color: seagreen;
     color: white;
-    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -23,8 +31,12 @@ html, body {
 
 }
 
+.box h1 {
 
 
+
+
+}
 
 body {
     margin: 0;
