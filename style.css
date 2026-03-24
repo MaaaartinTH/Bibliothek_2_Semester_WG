@@ -1,11 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+
 .box{
 
     width: 50%;
-    height: 560px;
     background-color: seagreen;
     color: white;
-    margin: 0px;
-    padding: 10px;
-    border-radius: 10px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.box h1 {
+
+
+
 
 }
