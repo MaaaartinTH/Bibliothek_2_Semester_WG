@@ -21,7 +21,7 @@ html, body {
 .box{
 
     width: 50%;
-    background-color: seagreen;
+    background-color: rgb(78, 146, 108);
     color: white;
 
     display: flex;
@@ -41,17 +41,19 @@ html, body {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-    margin: 10px;
+    margin: 1px;
     padding: 10px;
 
 
 }
 
 .box h4 {
-   font-family: "Plus Jakarta Sans", sans-serif;
-   font-optical-sizing: auto;
-   font-weight: normal;
-   font-style: normal;
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 1px;
 }
 
 .video-container {
@@ -80,12 +82,12 @@ html, body {
 }
 
 .book_btn a {
-    background-color: rgb(175, 117, 218);
+    background-color: rgb(13, 67, 56);
     color: azure;
     text-decoration: none;
     padding: 10px;
-    border: 5px solid rgba(148, 93, 166, 0.729);
-    border-radius: 5px;
+    border: 5px solid rgba(13, 67, 56);
+    border-radius: 10px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
@@ -93,5 +95,5 @@ html, body {
 }
 
 .book_btn a:hover {
-    background-color: rgba(222, 190, 230, 0.592);
+    background-color: rgba(54, 151, 119, 0.592);
 }
