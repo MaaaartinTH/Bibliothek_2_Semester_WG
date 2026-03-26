@@ -8,8 +8,7 @@ html, body {
     font-family: sans-serif;
 }
 
-
-
+/* index.html */
 .main_container{
 
     display: flex;
@@ -56,6 +55,7 @@ html, body {
     margin-top: 1px;
 }
 
+
 .video-container {
     width: 50%;
     height: 100vh; /* Wichtig: Behält die volle Höhe bei */
@@ -96,4 +96,31 @@ html, body {
 
 .book_btn a:hover {
     background-color: rgba(54, 151, 119, 0.592);
+}
+
+/* library.html */
+
+.header{
+
+    width: 100%;
+    height: 100px;
+    background-color: rgb(78, 146, 108);
+    color: white;
+
+    display: flex;
+
+    position: relative;
+
+}
+
+.header h1{
+
+    font-size: 42px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    margin: 5px;
+    padding: 10px;
+
 }
