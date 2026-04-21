@@ -318,7 +318,8 @@ html, body {
     border-radius: 10px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 16px;
     font-style: normal;
 
 }
