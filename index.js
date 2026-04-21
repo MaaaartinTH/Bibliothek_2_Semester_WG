@@ -12,7 +12,7 @@ function showTime(){
       minutes = "0" + minutes;
     }
     
-    let inhalt = hours + ":" + minutes;
+    let inhalt = hours + ":" + minutes + ":" + seconds;
 
     document.getElementById("Uhrzeit").innerHTML = inhalt;
     
