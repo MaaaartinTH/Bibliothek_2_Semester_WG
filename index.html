@@ -5,6 +5,8 @@
     <title>Meine Bibliothek</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
     
 </head>
 <body>
@@ -12,13 +14,21 @@
 
 <div class="main_container">
     <div class="box">
+    
+
         <h1>Meine Bibliothek</h1>
         <h4>xx - gelesene Bücher 2026</h4>
+
+        <div class="clock-container">
+            <span id="Uhrzeit">00:00</span>
+        </div>
 
         <div class="book_btn">
             <a href="library.html">Go to books</a>
         </div>
     </div>
+
+    <script>showTime()</script>
 
     <div class="video-container">
         <video autoplay muted loop>
