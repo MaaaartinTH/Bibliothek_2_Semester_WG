@@ -95,7 +95,8 @@ html, body {
 }
 
 .book_btn a:hover {
-    background-color: rgba(54, 151, 119, 0.592);
+    background-color: rgb(25, 94, 80);
+    border-color:  rgb(25, 94, 80);
 }
 
 /* library.html */
