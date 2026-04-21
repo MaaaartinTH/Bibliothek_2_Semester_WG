@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<div class="header">
+
+    <h1 class="">Book Editor</h1>
+
+    <div class="search-container">
+        <input type="text" placeholder="Suche nach Büchern...">
+        <button type="submit">Suchen</button>
+    </div>
+
+</div>
+
+<div class="new_book">
+
+    <div class="book_cover">
+        <img src="book_cover_placeholder.png" alt="" width=320px; height=auto;>
+    </div>
+
+    <div class="add_book_form">
+
+        <form action="https://zuse1.efi.ohmportal.de:8443/json" method="post">
+
+
+            <div class = "label_entry">
+                <h4 class="form_text">Titel: </h4>
+                <input class="form" type="text" name="title">
+            </div>
+
+            <div class = "label_entry">
+                <h4 class="form_text">Genre: </h4>
+                <input class="form" type="text" name="genre">
+            </div>
+
+            <div class = "label_entry">
+                <h4 class="form_text">Seitenanzahl: </h4>
+                <input class="form" type="text" name="pages">
+            </div>
+
+            <div class = "label_entry">
+                <h4 class="form_text">Autor: </h4>
+                <input class="form" type="text" name="author">
+            </div>
+
+            <div class = "label_entry">
+                <h4 class="form_text">Verlag: </h4>
+                <input class="form" type="text" name="publisher">
+            </div>
+
+            <button type="submit" class="submit_btn">Hinzufügen</button>
+
+
+        </form>
+
+        <div class="libray_return_btn">
+            <a href="library.html">Zurück zur Bibiliothek</a>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

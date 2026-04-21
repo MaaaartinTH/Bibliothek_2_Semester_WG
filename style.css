@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 
 html, body {
     margin: 0;
@@ -163,6 +167,28 @@ html, body {
     border-color:  rgb(25, 94, 80);
 }
 
+.add_new_book{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+}
+
+.add_new_book a{
+    background-color: rgb(13, 67, 56);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 5px solid rgba(13, 67, 56);
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -217,4 +243,81 @@ html, body {
 .dropdown_content a:hover {
     background-color:rgb(184, 241, 210);
     color: rgb(40, 133, 114);
+}
+
+/*add_new_book.html*/
+
+.book_cover img{
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    display: flex;
+    border-radius: 15px;
+}
+.add_book_form form{
+    position: absolute;
+    top: 200px;
+    left: 375px;
+    display: flex;
+    flex-direction: column; /* Die Zeilen (Label + Input) sollen untereinander stehen */
+    gap: 30px;
+}
+
+.label_entry {
+    display: flex;          /* Aktiviert Flexbox für diese Reihe */
+    flex-direction: row;    /* Sorgt dafür, dass Text und Input NEBENEINANDER stehen */
+    align-items: center;    /* Richtet Text und Feld vertikal mittig aneinander aus */
+    gap: 10px;              /* Abstand zwischen Text und Feld */
+}
+
+.form_text {
+    margin: 0;
+    width: 130px;
+    font-size: 16px;
+    color: #2c3e50; /* Dunkles Anthrazit statt Tiefschwarz */
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.form {
+    width: 300px;
+    padding: 12px 15px;
+    border: 2px solid #e0e6ed; /* Dezenter Rahmen */
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.submit_btn{
+    background-color: rgb(13, 67, 56);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 5px solid rgba(13, 67, 56);
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+.libray_return_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.libray_return_btn a {
+    background-color: rgb(13, 67, 56);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 5px solid rgba(13, 67, 56);
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
