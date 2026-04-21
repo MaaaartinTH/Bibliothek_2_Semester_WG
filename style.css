@@ -109,8 +109,12 @@ html, body {
     font-family: "Playfair Display", serif;
 
     display: flex;
+    /* 'flex-start' sorgt dafür, dass alles links klebt */
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 20px; /* Hier steuerst du den Abstand zwischen Logo und Button */
+    padding: 10px 20px;
 
-    display: flex;
     justify-content: space-between; /* Schiebt die Kinder an die äußeren Ränder */
     align-items: center;            /* Zentriert sie vertikal zueinander */
     padding: 10px 40px;             /* Abstand zu den Seitenwänden */
@@ -162,8 +166,8 @@ html, body {
 .dropdown {
     position: relative;
     display: inline-block;
-    right: 1300px;
-    top: 5px;
+
+
 
 }
 
