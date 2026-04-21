@@ -204,6 +204,11 @@ html, body {
 
 }
 
+.add_new_book a:hover {
+    background-color: rgb(25, 94, 80);
+    border-color:  rgb(25, 94, 80);
+}
+
 
 .dropdown {
     position: relative;
@@ -318,6 +323,11 @@ html, body {
 
 }
 
+.submit_btn:hover {
+    background-color: rgb(25, 94, 80);
+    border-color:  rgb(25, 94, 80);
+}
+
 .libray_return_btn {
     position: absolute;
     bottom: 20px;
@@ -336,4 +346,9 @@ html, body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+}
+
+.libray_return_btn a:hover {
+    background-color: rgb(25, 94, 80);
+    border-color:  rgb(25, 94, 80);
 }
