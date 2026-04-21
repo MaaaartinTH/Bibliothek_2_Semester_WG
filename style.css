@@ -16,6 +16,7 @@ html, body {
 .main_container{
 
     display: flex;
+
     height: 100vh;
     width: 100%;
 
@@ -59,6 +60,21 @@ html, body {
     margin-top: 1px;
 }
 
+.clock-container {
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(10px);          /* Milchglas-Effekt */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 8px;                   /* Abgerundete Ecken */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Schrift-Styling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 
 .video-container {
     width: 50%;
@@ -99,7 +115,8 @@ html, body {
 }
 
 .book_btn a:hover {
-    background-color: rgba(54, 151, 119, 0.592);
+    background-color: rgb(25, 94, 80);
+    border-color:  rgb(25, 94, 80);
 }
 
 /* library.html */
