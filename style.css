@@ -162,7 +162,7 @@ html, body {
 .search-container{
     position: absolute;
     right: 50px;
-    top: 45px;
+    top: 30px;
 }
 
 .search-container button {
