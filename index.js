@@ -45,7 +45,16 @@ let books = [
       Genre: "Fiction",
       Seiten: "288 Seiten",
       Verlag: "Hogarth Press"
-  }
+  },
+   {
+      Bild: "Media/DieSchoensteVersion.jpeg",
+      Titel: "Die schönste Version",
+      Autor: "Ruth-Maria Thomans",
+      Genre: "Roman",
+      Seiten: "272 Seiten",
+      Verlag: "Rowohlt Taschenbuch"
+  },
+
   
 
 ];
@@ -72,5 +81,6 @@ function renderBookCard(buch) {
       container.innerHTML += htmlKonstrukt;
 }
 
-renderBookCard(books[0]);
-renderBookCard(books[1]);
+books.forEach(function(einzelnesBuch){
+    renderBookCard(einzelnesBuch);
+});
