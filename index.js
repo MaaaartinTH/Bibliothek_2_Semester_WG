@@ -69,7 +69,8 @@ function renderBookCard(buch) {
       '    </div>\n' +
       '</article>';
 
-      container.innerHTML = htmlKonstrukt;
+      container.innerHTML += htmlKonstrukt;
 }
 
 renderBookCard(books[0]);
+renderBookCard(books[1]);
