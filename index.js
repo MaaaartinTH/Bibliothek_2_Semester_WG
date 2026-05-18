@@ -4,9 +4,9 @@ console.log('Happy developing ✨')
 
 function showTime(){
     let now = new Date();
-    let hours = now.getHours()
-    let minutes = now.getMinutes()
-    let seconds = now.getSeconds()
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
  
     if (minutes < 10) {
       minutes = "0" + minutes;
@@ -14,9 +14,17 @@ function showTime(){
     
     let inhalt = hours + ":" + minutes + ":" + seconds;
 
-    document.getElementById("Uhrzeit").innerHTML = inhalt;
+    // 1. Das Element suchen
+    let uhrElement = document.getElementById("Uhrzeit");
     
+    // 2. Sicherheits-Check: Nur wenn das Element EXISTIERT, Text einfügen
+    if (uhrElement) {
+        uhrElement.innerHTML = inhalt;
+    }
+    // Wenn es null ist (wie auf dieser Seite), passiert einfach gar nichts 
+    // und das Skript läuft ohne Fehler weiter!
 }
+    
 
 showTime();
 setInterval(showTime, 1000);
