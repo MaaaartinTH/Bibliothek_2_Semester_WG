@@ -29,16 +29,19 @@ function showTime(){
 showTime();
 setInterval(showTime, 1000);
 
-let fivefeetapart = {
+let books = [
+  {
       Bild: "Media/FiveFeetApart.jpg",
       Titel: "Five Feet Apart",
       Autor: "Rachael Lippincott",
       Genre: "Romance",
       Seiten: "304 Seiten",
       Verlag: "Simon & Schuster"
-};
+  },
+  
 
-console.log(fivefeetapart);
+];
+console.log(books);
 
 
 
@@ -61,4 +64,4 @@ function renderBookCard(buch) {
       container.innerHTML = htmlKonstrukt;
 }
 
-renderBookCard(fivefeetapart);
+renderBookCard(books[0]);
