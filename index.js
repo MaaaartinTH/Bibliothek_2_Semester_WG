@@ -29,7 +29,7 @@ let fivefeetapart = {
       Verlag: "Simon & Schuster"
 };
 
-console.log(book_card);
+console.log(fivefeetapart);
 
 
 
