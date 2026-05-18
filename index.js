@@ -46,13 +46,15 @@ function renderBookCard(buch) {
       const container = document.getElementById("daten-container");
 
       const htmlKonstrukt = 
-      '<div class="book-card">\n' +
-      '    <h2>' + buch.Titel + '</h2>\n' + 
-      '    <h4>von ' + buch.Autor + '</h4>\n' +
-      '    <p><strong>Genre:</strong> ' + buch.Genre + '</p>\n' +
-      '    <p><strong>Seitenanzahl:</strong> ' + buch.Seiten + ' Seiten</p>\n' +
-      '    <p><strong>Verlag:</strong> ' + buch.Verlag + '</p>\n' +
-      '</div>';
+      '<article class="book-card">\n' + 
+      '    <h2 class="book-title">' + buch.Titel + '</h2>\n' + 
+      '    <div class="book-details">\n' +
+      '        <p><strong>Autor:</strong> ' + buch.Autor + '</p>\n' +
+      '        <p><strong>Genre:</strong> ' + buch.Genre + '</p>\n' +
+      '        <p><strong>Seiten:</strong> ' + buch.Seiten + '</p>\n' + 
+      '        <p><strong>Verlag:</strong> ' + buch.Verlag + '</p>\n' +
+      '    </div>\n' +
+      '</article>';
 
       container.innerHTML = htmlKonstrukt;
 }
