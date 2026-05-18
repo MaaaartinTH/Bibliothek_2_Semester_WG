@@ -390,3 +390,8 @@ html, body {
 .book-details strong {
   color: rgba(13, 67, 56);
 }
+
+#current-book {
+    position: relative; 
+    transition: background-color 0.3s;
+}

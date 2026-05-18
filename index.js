@@ -20,3 +20,14 @@ function showTime(){
 
 showTime();
 setInterval(showTime, 1000);
+
+let book_card = {
+      Booktitle: "Five Feet Apart",
+      Autor: "Rachael Lippincott",
+      Genre: "Romance",
+      Seiten: "304 Seiten",
+      Verlag: "Simon & Schuster"
+};
+
+console.log(book_card);
+
