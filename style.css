@@ -388,7 +388,11 @@ html, body {
   color: rgba(13, 67, 56);
 }
 
-#current-book {
-    position: relative; 
-    transition: background-color 0.3s;
+
+.book-cover {
+    width: 200px;       
+    height: 300px;       
+    object-fit: cover;   
+    
+    border-radius: 6px;
 }
