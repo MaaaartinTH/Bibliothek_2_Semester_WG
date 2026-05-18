@@ -21,8 +21,8 @@ function showTime(){
 showTime();
 setInterval(showTime, 1000);
 
-let book_card = {
-      Booktitle: "Five Feet Apart",
+let fivefeetapart = {
+      Titel: "Five Feet Apart",
       Autor: "Rachael Lippincott",
       Genre: "Romance",
       Seiten: "304 Seiten",
@@ -31,3 +31,20 @@ let book_card = {
 
 console.log(book_card);
 
+function renderBookCard(buch) {
+
+      const container = document.getElementById("daten-container");
+
+      const htmlKonstrukt = 
+      '<div class="book-card">\n' +
+      '    <h2>' + buch.Titel + '</h2>\n' + 
+      '    <h4>von ' + buch.Autor + '</h4>\n' +
+      '    <p><strong>Genre:</strong> ' + buch.Genre + '</p>\n' +
+      '    <p><strong>Seitenanzahl:</strong> ' + buch.Seiten + ' Seiten</p>\n' +
+      '    <p><strong>Verlag:</strong> ' + buch.Verlag + '</p>\n' +
+      '</div>';
+
+      container.innerHTML = htmlKonstrukt;
+}
+
+renderBookCard(fivefeetapart);
