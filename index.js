@@ -38,6 +38,14 @@ let books = [
       Seiten: "304 Seiten",
       Verlag: "Simon & Schuster"
   },
+  {
+      Bild: "Media/TheVegetarian.jpg",
+      Titel: "The Vegetarian",
+      Autor: "Han Kang",
+      Genre: "Fiction",
+      Seiten: "288 Seiten",
+      Verlag: "Hogarth Press"
+  }
   
 
 ];
