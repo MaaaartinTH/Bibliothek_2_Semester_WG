@@ -371,7 +371,7 @@ html, body {
 }
 
 .book-title {
-  margin-top: 0;
+  margin-top: 5px;
   color: rgb(13, 67, 56);
   font-size: 1.2;
   border-bottom: 2px solid rgb(40, 133, 114);
