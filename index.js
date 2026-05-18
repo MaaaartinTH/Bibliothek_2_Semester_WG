@@ -30,6 +30,7 @@ showTime();
 setInterval(showTime, 1000);
 
 let fivefeetapart = {
+      Bild: "Media/FiveFeetApart.jpg",
       Titel: "Five Feet Apart",
       Autor: "Rachael Lippincott",
       Genre: "Romance",
@@ -46,7 +47,8 @@ function renderBookCard(buch) {
       const container = document.getElementById("daten-container");
 
       const htmlKonstrukt = 
-      '<article class="book-card">\n' + 
+      '<article class="book-card">\n' +
+      '    <img src="' + buch.Bild + '" alt="Cover von ' + buch.Titel + '" class="book-cover">\n' +
       '    <h2 class="book-title">' + buch.Titel + '</h2>\n' + 
       '    <div class="book-details">\n' +
       '        <p><strong>Autor:</strong> ' + buch.Autor + '</p>\n' +
