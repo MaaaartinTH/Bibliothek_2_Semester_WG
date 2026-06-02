@@ -266,15 +266,13 @@ html, body {
 /*add_new_book.html*/
 
 .book_cover img{
-    position: absolute;
-    top: 150px;
+    position: relative;
     left: 20px;
     display: flex;
     border-radius: 15px;
 }
 .add_book_form form{
-    position: absolute;
-    top: 200px;
+    position: relative;
     left: 375px;
     display: flex;
     flex-direction: column; /* Die Zeilen (Label + Input) sollen untereinander stehen */
@@ -349,6 +347,89 @@ html, body {
 .libray_return_btn a:hover {
     background-color: rgb(25, 94, 80);
     border-color:  rgb(25, 94, 80);
+}
+
+/*add_new_book auf unserer Seite*/
+
+/* Der Hauptcontainer für die neue Buch-Sektion */
+.new_book_site {
+    display: flex;              /* Bringt Cover und Formular nebeneinander */
+    justify-content: center;    /* Zentriert den gesamten Inhalt horizontal */
+    align-items: flex-start;    /* Richtet Cover und Formular oben bündig aus */
+    gap: 50px;                  /* Schöner Abstand zwischen Cover und Formular */
+    padding: 60px 20px;         /* Abstand nach oben/unten und zu den Seiten */
+    background-color: #fcfcfc;  /* Optional: Ein minimal hellerer Hintergrund für die Formularseite */
+}
+
+/* Der Container für das Buchcover */
+.book_cover_site img {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Gibt dem Platzhalter etwas Tiefe */
+    display: block;
+}
+
+/* Der Container für das Formular */
+.add_book_form_site {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Dezenter Rahmen-Schatten fürs Formular */
+}
+
+/* Das Formular selbst steuert nur noch die Abstände der Inputs untereinander */
+.add_book_form_site form {
+    display: flex;
+    flex-direction: column; 
+    gap: 25px;                 /* Abstand zwischen den einzelnen Eingabezeilen */
+}
+
+.label_entry {
+    display: flex;          
+    flex-direction: row;    
+    align-items: center;    
+    gap: 15px;              
+}
+
+.form_text {
+    margin: 0;
+    width: 130px;
+    font-size: 16px;
+    color: #2c3e50; 
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.form {
+    width: 300px;
+    padding: 12px 15px;
+    border: 2px solid #e0e6ed; 
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Kleiner Bonus: Das Eingabefeld leuchtet dezent, wenn man reinklickt */
+.form:focus {
+    border-color: rgb(78, 146, 108);
+}
+
+.submit_btn {
+    background-color: rgb(13, 67, 56);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.submit_btn:hover {
+    background-color: rgb(25, 94, 80);
 }
 
 

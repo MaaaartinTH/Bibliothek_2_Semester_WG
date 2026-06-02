@@ -66,6 +66,10 @@ function renderBookCard(buch) {
 
       const container = document.getElementById("daten-container");
 
+      if (!container) {
+        return; 
+    }
+
       const htmlKonstrukt = 
       '<article class="book-card">\n' +
       '    <img src="' + buch.Bild + '" alt="Cover von ' + buch.Titel + '" class="book-cover">\n' +
@@ -84,3 +88,37 @@ function renderBookCard(buch) {
 books.forEach(function(einzelnesBuch){
     renderBookCard(einzelnesBuch);
 });
+
+
+
+// dom holen
+const bookForm = document.getElementById('book_form');
+
+// SICHERHEITS-CHECK: Nur Event-Listener hinzufügen, wenn das Formular da ist!
+if (bookForm) {
+    bookForm.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        const titleValue = document.getElementById('book_title').value;
+        const genreValue = document.getElementById('book_genre').value;
+        const pagesValue = document.getElementById('book_pages').value;
+        const authorValue = document.getElementById('book_author').value;
+        const publisherValue = document.getElementById('book_publisher').value;
+
+        const newBook = {
+            Bild: "Media/book_cover_placeholder.png", // Platzhalter hinzufügen, damit kein Fehler entsteht
+            Titel: titleValue,
+            Autor: authorValue,
+            Genre: genreValue,
+            Seiten: pagesValue + " Seiten",
+            Verlag: publisherValue
+        };
+
+        // Das wird jetzt nur auf der Seite klappen, wo auch der Daten-Container ist.
+        // Wenn du die Daten seitenübergreifend speichern willst, müsstest du 
+        // mit dem "LocalStorage" des Browsers arbeiten.
+        renderBookCard(newBook);
+     
+        bookForm.reset();
+    });
+}
