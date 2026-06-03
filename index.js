@@ -29,7 +29,7 @@ function showTime(){
 showTime();
 setInterval(showTime, 1000);
 
-let books = [
+/*let books = [
   {
       Bild: "Media/FiveFeetApart.jpg",
       Titel: "Five Feet Apart",
@@ -58,7 +58,7 @@ let books = [
   
 
 ];
-console.log(books);
+console.log(books);*/
 
 
 
@@ -85,9 +85,34 @@ function renderBookCard(buch) {
       container.innerHTML += htmlKonstrukt;
 }
 
-books.forEach(function(einzelnesBuch){
+/*books.forEach(function(einzelnesBuch){
     renderBookCard(einzelnesBuch);
-});
+});*/
+
+function loadBookFromJSON(){
+
+    fetch('books.json')
+    
+    .then(function(response) {
+        if(!response.ok) {
+            throw new Error('Fehler beim Laden der JSON-Datei');
+        }
+        return response.json();
+
+    })
+    .then(function(geladeneBuecher) {
+
+        geladeneBuecher.forEach(function(einzelnesBuch) {
+            renderBookCard(einzelnesBuch);
+        });
+    })
+    .catch(function(error) {
+        console.error('Fehler', error);
+    });
+
+}
+
+window.addEventListener('DOMContentLoaded', loadBookFromJSON);
 
 
 
@@ -121,4 +146,5 @@ if (bookForm) {
      
         bookForm.reset();
     });
+
 }
