@@ -2,6 +2,7 @@ console.log('Happy developing ✨')
 
 "use strict"
 
+
 function showTime(){
     let now = new Date();
     let hours = now.getHours();
@@ -91,7 +92,7 @@ function renderBookCard(buch) {
 
 function loadBookFromJSON(){
 
-    fetch('books.json')
+    fetch('/hash/buecher/buecherliste')
     
     .then(function(response) {
         if(!response.ok) {
@@ -101,6 +102,8 @@ function loadBookFromJSON(){
 
     })
     .then(function(geladeneBuecher) {
+
+        
 
         geladeneBuecher.forEach(function(einzelnesBuch) {
             renderBookCard(einzelnesBuch);
