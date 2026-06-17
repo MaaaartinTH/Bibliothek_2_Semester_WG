@@ -2,6 +2,8 @@ console.log('Happy developing ✨')
 
 "use strict"
 
+let aktuelleBuecher = []
+
 
 function showTime(){
     let now = new Date();
@@ -103,9 +105,13 @@ function loadBookFromJSON(){
     })
     .then(function(geladeneBuecher) {
 
-        
+        aktuelleBuecher = geladeneBuecher;
 
-        geladeneBuecher.forEach(function(einzelnesBuch) {
+        const container = document.getElementById("daten-container");
+
+        if (container) container.innerHTML = "";
+
+        aktuelleBuecher.forEach(function(einzelnesBuch) {
             renderBookCard(einzelnesBuch);
         });
     })
@@ -117,6 +123,25 @@ function loadBookFromJSON(){
 
 window.addEventListener('DOMContentLoaded', loadBookFromJSON);
 
+// NEU FÜR 6.2: Diese Funktion schickt das AKTUALISIERTE GESAMTE Array zum Server
+function saveBooksToHash() {
+    fetch('/hash/buecher/buecherliste', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(aktuelleBuecher) // Das ganze Array abschicken
+    })
+    .then(function(response) {
+        if (!response.ok) {
+            throw new Error('Fehler beim Speichern auf dem Server');
+        }
+        console.log('Erfolgreich auf zusel gespeichert!');
+    })
+    .catch(function(error) {
+        console.error('Speicherfehler:', error);
+    });
+}
 
 
 // dom holen
@@ -145,6 +170,10 @@ if (bookForm) {
         // Das wird jetzt nur auf der Seite klappen, wo auch der Daten-Container ist.
         // Wenn du die Daten seitenübergreifend speichern willst, müsstest du 
         // mit dem "LocalStorage" des Browsers arbeiten.
+        aktuelleBuecher.push(newBook); // Das neue Buch zum Array hinzufügen
+        saveBooksToHash(); // Die aktualisierten Bücher zum Server senden
+        
+        
         renderBookCard(newBook);
      
         bookForm.reset();
